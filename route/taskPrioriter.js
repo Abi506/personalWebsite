@@ -52,7 +52,6 @@ router.put("/:id", async (req, res) => {
                 title: req.body.title,
                 description: req.body.description,
                 priority: req.body.priority,
-                date: new Date(req.body.date), // Update the date if provided
                 status: req.body.status, // Optional: Update status if provided
             },
             { new: true } // Return the updated document

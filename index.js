@@ -1,10 +1,11 @@
 const express=require("express")
 const app=express()
+const cors=require("cors")
 const mongoose=require("mongoose")
 const dotenv=require("dotenv")
 app.use(express.json())
 dotenv.config()
-
+app.use(cors())
 const contactRoute=require("./route/contact")
 const taskPrioriterRoute=require("./route/taskPrioriter")
 const videoWatchLaterRoute=require("./route/videoWatchLater")
