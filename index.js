@@ -9,6 +9,7 @@ app.use(cors())
 const contactRoute=require("./route/contact")
 const taskPrioriterRoute=require("./route/taskPrioriter")
 const videoWatchLaterRoute=require("./route/videoWatchLater")
+const quoteRoute=require("./route/quote")
 
 mongoose.connect("mongodb+srv://abinandhan:hqzzdU3vLepl8gY8@cluster0.2x76hsn.mongodb.net/personalData")
 .then(()=>console.log("Mongodb connected successfully"))
@@ -17,6 +18,7 @@ mongoose.connect("mongodb+srv://abinandhan:hqzzdU3vLepl8gY8@cluster0.2x76hsn.mon
 app.use('/contact',contactRoute)
 app.use("/taskPrioriter",taskPrioriterRoute)
 app.use('/videoWatchLater',videoWatchLaterRoute)
+app.use('/quote',quoteRoute)
 
 app.listen(3000,()=>{
     console.log("Server is running in localhost:3000")
